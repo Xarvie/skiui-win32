@@ -2,7 +2,7 @@
 UI lib, **Simple**, **Fast** and **Safe**, Using **pure** Win32 API.
 
 ## USE
-Copy skiui-lite.h/cpp into your project, and include skiui-lite.h, cheers.
+Copy skiui-lite.h/.cpp into your project, and include skiui-lite.h, cheers.
 
 ## Test
 Test passed on platforms: gcc clang msvc  
