@@ -10,7 +10,7 @@ void func()
     int& i = *global_i;
     std::cout<<"啦啦肥按钮被点击了,i的值为："<< i <<std::endl;
 }
-void CXX98()
+int CXX98()
 {
     global::init(NULL, NULL);
     Window* win1 = Window::create(NULL, "SkiUI-lite 窗口 Demo");
@@ -22,12 +22,12 @@ void CXX98()
     global_i = &i;
     button1->evClick(func);
 
-    global::loop();
+    return global::loop();
 }
 //==================================================================================
 //==================================================================================
 //现代化C++写法 支持C++98裸指针，支持C++03/11/14/17/20
-void CXX11()
+int CXX11()
 {
     global::init(nullptr, nullptr);
     auto win1 = Window::create(nullptr, "SkiUI-lite 窗口 Demo");
@@ -38,7 +38,7 @@ void CXX11()
     int i = 1;
     button1->evClick([&] { std::cout << "啦啦肥按钮被点击了,i的值为：" << i << std::endl; });
 
-    global::loop();
+    return global::loop();
 }
 //==================================================================================
 
